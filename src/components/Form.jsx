@@ -8,6 +8,20 @@ export default function Form() {
     console.log(image);
   };
 
+  const clearForm = () => {
+    setImage();
+    setMessage('');
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //Check if form
+    console.log('Successfully submitted');
+    console.log('Other middleware to send message link to database');
+
+    clearForm();
+  };
+
   return (
     <div>
       <form>
