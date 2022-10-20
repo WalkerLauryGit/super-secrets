@@ -10,6 +10,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <Root />,
   },
+  {
+    path: '/send',
+    element: <Form />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
