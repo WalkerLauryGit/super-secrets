@@ -2,17 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
-import Form from './components/Form';
+import Form from './components/form';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import Root from './routes/root';
+import Open from './routes/open';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-  },
-  {
-    path: '/send',
-    element: <Form />,
+    children: [
+      {
+        path: 'send/',
+        element: <Form />,
+      },
+      {
+        path: 'open/',
+        element: <Open />,
+      },
+    ],
   },
 ]);
 

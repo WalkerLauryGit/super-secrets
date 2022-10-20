@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Send() {
+export default function Form() {
   const [message, setMessage] = useState('');
   const [image, setImage] = useState();
   const handleImageChange = (e) => {
